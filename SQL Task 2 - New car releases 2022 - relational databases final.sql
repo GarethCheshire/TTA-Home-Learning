@@ -476,7 +476,7 @@ SELECT * FROM Telford_Motor_Show
 where type_of_test_drive = 'off-road experience';
 
 SELECT * FROM Telford_Motor_Show
-where type_of_test_drive = 'high speed passenger ride';
+where type_of_test_drive = '%high speed passenger ride%';
 
 SELECT * FROM Telford_Motor_Show
 where type_of_test_drive = 'road test,high speed passenger ride';
@@ -494,12 +494,12 @@ WHERE new_car_releases.model = Telford_Motor_Show.model AND Telford_Motor_Show.a
 SELECT *
 FROM new_car_releases
 INNER JOIN Telford_Motor_Show
-WHERE new_car_releases.model = Telford_Motor_Show.model AND new_car_releases.fuel_type = "hybrid";
+WHERE new_car_releases.model = Telford_Motor_Show.model AND new_car_releases.fuel_type = "%hybrid%";
 
 SELECT *
 FROM Telford_Motor_Show
 INNER JOIN new_car_releases
-WHERE Telford_Motor_Show.model = new_car_releases.model AND new_car_releases.fuel_type = "electric";
+WHERE Telford_Motor_Show.model = new_car_releases.model AND new_car_releases.fuel_type = "%electric%";
 
 SELECT *
 FROM new_car_releases
